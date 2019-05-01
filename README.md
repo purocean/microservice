@@ -10,6 +10,7 @@ Microservice Sample
 1. 入口：http://ip:8081
 
 ## 说明
+1. 如果访问业务页面出现 504 可以耐心等待一会儿，业务微服务启动耗时更久
 1. 业务逻辑：顾客管理/产品管理/订单下单管理
 1. 顾客服务：Customer List / add / remove customers
 1. 产品服务：Catalog List / add / remove items
