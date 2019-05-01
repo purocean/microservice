@@ -1,6 +1,11 @@
 Microservice Sample
 ==============
 
+## 运行
+1. 安装 docker docker-compose
+1. 运行脚本 `sh scripts/createdemo.sh`
+
+
 [German / Deutsch](LIESMICH.md)
 
 This is a sample for my
@@ -53,7 +58,7 @@ The servers for the infrastruture are pretty simple thanks to Spring Cloud:
 - microservice-demo-zuul is the Zuul server. It distributes the requests to the three microservices.
 - microservice-demo-turbine can be used to consolidate the Hystrix metrics and has a Hystrix dashboard.
 
-The microservices are: 
+The microservices are:
 - microservice-demo-catalog is the application to take care of items.
 - microserivce-demo-customer is responsible for customers.
 - microservice-demo-order does order processing. It uses microservice-demo-catalog and microservice-demo-customer. Ribbon is used for load balancing and Hystrix for resilience.
