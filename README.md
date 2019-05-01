@@ -6,6 +6,23 @@ Microservice Sample
 1. 构建镜像 `sh scripts/createdemo.sh`
 1. 运行微服务 `cd docker; dokcer-compose up`
 
+## 访问
+1. 入口：http://ip:8081
+
+## 说明
+1. 业务逻辑：顾客管理/产品管理/订单下单管理
+1. 顾客服务：Customer List / add / remove customers
+1. 产品服务：Catalog List / add / remove items
+1. 产品搜索服务：Catalog Search Items
+1. 订单服务：Order Create an order
+1. 注册中心管理（不适用）：Eureka (Vagrant) Service discovery
+1. 注册中心管理：Eureka (Docker Compose / Docker Machine) Service discovery
+1. 负载均衡管理（不适用） Hystrix dashboard (Vagrant) Monitor state of Hystrix
+1. 负载均衡管理Hystrix dashboard (Docker Compose / Docker Machine) Monitor state of Hystrix
+
+
+------------------------------------------------------------------------------------------------------------------
+
 [German / Deutsch](LIESMICH.md)
 
 This is a sample for my
