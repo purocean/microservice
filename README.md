@@ -3,8 +3,8 @@ Microservice Sample
 
 ## 运行
 1. 安装 docker docker-compose
-1. 运行脚本 `sh scripts/createdemo.sh`
-
+1. 构建镜像 `sh scripts/createdemo.sh`
+1. 运行微服务 `cd docker; dokcer-compose up`
 
 [German / Deutsch](LIESMICH.md)
 
