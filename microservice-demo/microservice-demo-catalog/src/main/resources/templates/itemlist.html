@@ -3,28 +3,28 @@
 	xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
 	layout:decorator="layout">
 <head>
-<title>Item : View all</title>
+<title>商品列表</title>
 </head>
 <body>
-	<h1 layout:fragment="header">Item : View all</h1>
+	<h1 layout:fragment="header">商品列表</h1>
 	<div layout:fragment="content" class="container">
 		<table class="table table-bordered table-striped">
 			<thead>
 				<tr>
 					<td>id</td>
-					<td>Name</td>
-					<td>Price</td>
+					<td>名称</td>
+					<td>价格</td>
 					<td></td>
 				</tr>
 			</thead>
 			<tbody>
 				<tr th:if="${items.empty}">
-					<td colspan="4">No items</td>
+					<td colspan="4">无内容</td>
 				</tr>
 				<tr th:each="item : ${items}">
 					<td><a href="1.html" th:href="${item.id+'.html'}"
 						th:text="${item.id}">1</a></td>
-					<td th:text="${item.name}">Name</td>
+					<td th:text="${item.name}">名称</td>
 					<td th:text="${item.price}">42.0</td>
 					<td><form th:action="${item.id+'.html'}"
 							th:method="delete">
@@ -35,7 +35,7 @@
 		</table>
 		<div class="row">
 			<div class="col-md-4">
-				<a href="form.html">Add Item</a>
+				<a href="form.html">添加商品</a>
 			</div>
 		</div>
 	</div>

@@ -3,23 +3,23 @@
 	xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
 	layout:decorator="layout">
 <head>
-<title>Order : View all</title>
+<title>订单列表</title>
 </head>
 <body>
-	<h1 layout:fragment="header">Order : View all</h1>
+	<h1 layout:fragment="header">订单列表</h1>
 	<div layout:fragment="content" class="container">
 		<table class="table table-bordered table-striped">
 			<thead>
 				<tr>
 					<td>ID</td>
-					<td>Customer</td>
-					<td>Total Price</td>
+					<td>顾客</td>
+					<td>总价</td>
 					<td></td>
 				</tr>
 			</thead>
 			<tbody>
 				<tr th:if="${orders.empty}">
-					<td colspan="4">No orders</td>
+					<td colspan="4">无内容</td>
 				</tr>
 				<tr th:each="order : ${orders}">
 					<td><a href="order/1" th:href="${order.id}"
@@ -36,7 +36,7 @@
 		</table>
 		<div class="row">
 			<div class="col-md-4">
-				<a href="form.html">Add Order</a>
+				<a href="form.html">添加订单</a>
 			</div>
 		</div>
 	</div>

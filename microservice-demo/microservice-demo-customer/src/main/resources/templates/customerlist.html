@@ -3,23 +3,23 @@
 	xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
 	layout:decorator="layout">
 <head>
-<title>Customer : View all</title>
+<title>顾客列表</title>
 </head>
 <body>
-	<h1 layout:fragment="header">Customer : View all</h1>
+	<h1 layout:fragment="header">顾客列表</h1>
 	<div layout:fragment="content" class="container">
 		<table class="table table-bordered table-striped">
 			<thead>
 				<tr>
 					<td>id</td>
-					<td>Name</td>
-					<td>Firstname</td>
+					<td>名字</td>
+					<td>昵称</td>
 					<td></td>
 				</tr>
 			</thead>
 			<tbody>
 				<tr th:if="${customers.empty}">
-					<td colspan="4">No customers</td>
+					<td colspan="4">无内容</td>
 				</tr>
 				<tr th:each="customer : ${customers}">
 					<td><a href="1.html" th:href="${customer.id+'.html'}"
@@ -35,7 +35,7 @@
 		</table>
 		<div class="row">
 			<div class="col-md-4">
-				<a href="form.html">Add Customer</a>
+				<a href="form.html">添加</a>
 			</div>
 		</div>
 	</div>
