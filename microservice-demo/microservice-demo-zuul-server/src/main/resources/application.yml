@@ -1,15 +1,18 @@
 server:
   port: 8080
-    
+
 eureka:
   instance:
     leaseRenewalIntervalInSeconds: 10
     statusPageUrlPath: /info
-    healthCheckUrlPath: /health    
-    
+    healthCheckUrlPath: /health
+
 logging:
   level:
     ROOT: INFO
     org.springframework.web: DEBUG
 
-  
+spring:
+  thymeleaf:
+    encoding: UTF-8
+    content-type: text/html
